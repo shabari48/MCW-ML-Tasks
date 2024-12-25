@@ -1,0 +1,4 @@
+Resize
+Hue 30
+Grayscale
+Rotate 45

@@ -1,0 +1,3 @@
+Resize
+Hue 15
+Rotate 90
