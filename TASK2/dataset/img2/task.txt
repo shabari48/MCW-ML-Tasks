@@ -1,3 +1,4 @@
-Resize
-Hue 15
-Rotate 90
+Resize 680,680
+Rotate 20
+Blur
+edge

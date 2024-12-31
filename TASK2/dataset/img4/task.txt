@@ -1,3 +1,3 @@
-Resize
-Hue 15
-Rotate 90
+Resize 500,500
+Blur
+Threshold 100

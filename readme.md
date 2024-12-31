@@ -13,8 +13,8 @@ A simple car class hierarchy implementation demonstrating object-oriented progra
 - `main.py`: Main driver code demonstrating the usage
 
 ### Class Hierarchy
-- `Car`: Base class with common car properties
-  - `ElectricVehicle`: Inherits from Car, specific to electric vehicles
+- `Car`: Base class with common car properties 
+  - `ElectricVehicle`: Inherits from Car, specific to electric vehicles 
   - `GasVehicle`: Inherits from Car, specific to gas-powered vehicles
 
 ## TASK2: Image Processing System
@@ -49,9 +49,9 @@ TASK2/
 
 ### Supported Operations
 1. `Resize`: Scales the image to 50% of original size
-2. `Hue <value>`: Adjusts the hue by specified value
+2. `Hue`: Adjusts the hue by specified value
 3. `Grayscale`: Converts image to grayscale
-4. `Rotate <angle>`: Rotates image by specified angle
+4. `Rotate`: Rotates image by specified angle
 
 ### Output
 For each processed image, the system generates:
@@ -60,6 +60,58 @@ For each processed image, the system generates:
   - File size
   - Image dimensions
   - File path
+
+## TASK3: Real-time Face Filter Application
+
+A real-time face filter application using OpenCV for face detection and filter application. The application allows users to apply various filters (glasses, hats, animal faces) to detected faces in the webcam feed.
+
+### Files Structure
+```
+TASK3/
+├── images/
+│   ├── glasses.png
+│   ├── hat.png
+│   └── animal.png
+|
+|__ sounds/
+│   ├── glasses.png
+│   ├── hat.png
+│   └── animal.png
+└── main.py
+```
+
+### Features
+- Real-time face detection using OpenCV's Haar Cascade Classifier
+- Multiple filter options:
+  - Glasses filter
+  - Hat filter
+  - Animal face filter
+- Command-line interface for filter selection
+- Automatic camera detection
+- Sound effects for filter application
+
+### Supported Filters
+1. Glasses (-g): Overlays glasses on detected faces
+2. Hat (-t): Places a hat above detected faces
+3. Animal (-a): Applies animal face filter over detected faces
+
+### Command Line Arguments
+- `-g` or `--glasses`: Apply glasses filter
+- `-t` or `--hat`: Apply hat filter
+- `-a` or `--animal`: Apply animal filter
+
+
+### Usage Examples
+```bash
+# Apply glasses filter
+python main.py -g
+
+# Apply hat filter
+python main.py -t
+
+# Apply animal filter
+python main.py -a
+
 
 ## Requirements
 - Python 3.x
@@ -73,7 +125,9 @@ git clone https://github.com/shabari48/MCW-ML-Tasks.git
 
 2. Install required packages:
 ```bash
-pip install opencv-python 
+pip install opencv-python
+pip install tkinter
+pip install ttkbootstrap
 ```
 
 ## Usage
@@ -93,7 +147,16 @@ cd TASK2
 python main.py
 ```
 
-## Task File Format
+### TASK3
+1. Ensure your webcam is connected and accessible
+2. Place filter images in the filters directory
+3. Run the application with desired filters:
+```bash
+cd TASK3
+python main.py -g / -t / -a
+```
+
+## Task File Format (TASK2)
 Each task.txt file should contain one operation per line. Example:
 ```
 Resize
