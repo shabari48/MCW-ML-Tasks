@@ -26,6 +26,11 @@ Thumbs.db
 *.ico
 *.svg
 
+#Dataset files
+
+*.csv
+*.xlsx
+
 # Output files
 *_modified.*
 output.txt

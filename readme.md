@@ -17,6 +17,13 @@ A simple car class hierarchy implementation demonstrating object-oriented progra
   - `ElectricVehicle`: Inherits from Car, specific to electric vehicles 
   - `GasVehicle`: Inherits from Car, specific to gas-powered vehicles
 
+### Usage
+
+```bash
+cd TASK1
+python main.py
+```
+
 ## TASK2: Image Processing System
 
 An automated image processing system that applies various transformations to images based on task specifications provided in text files.
@@ -60,6 +67,16 @@ For each processed image, the system generates:
   - File size
   - Image dimensions
   - File path
+
+
+### Usage
+1. Place your images in separate folders under the dataset directory
+2. Create a task.txt file in each image folder with desired operations
+3. Run the processing script:
+```bash
+cd TASK2
+python main.py
+```
 
 ## TASK3: Real-time Face Filter Application
 
@@ -130,24 +147,8 @@ pip install tkinter
 pip install ttkbootstrap
 ```
 
-## Usage
 
-### TASK1
-```bash
-cd TASK1
-python main.py
-```
-
-### TASK2
-1. Place your images in separate folders under the dataset directory
-2. Create a task.txt file in each image folder with desired operations
-3. Run the processing script:
-```bash
-cd TASK2
-python main.py
-```
-
-### TASK3
+### Usage
 1. Ensure your webcam is connected and accessible
 2. Place filter images in the filters directory
 3. Run the application with desired filters:
@@ -156,7 +157,7 @@ cd TASK3
 python main.py -g / -t / -a
 ```
 
-## Task File Format (TASK2)
+### Task File Format (TASK2)
 Each task.txt file should contain one operation per line. Example:
 ```
 Resize
@@ -165,5 +166,84 @@ Grayscale
 Rotate 45
 ```
 
-## License
-[MIT License](https://opensource.org/licenses/MIT)
+## TASK 4 Exploratory Data Analyis on Zomato Dataset
+
+
+
+An exploratory data analysis (EDA) project on the Zomato dataset to uncover insights and trends in the restaurant industry.
+
+### Dataset
+The dataset can be downloaded from [Kaggle](https://www.kaggle.com/datasets/rishikeshkonapure/zomato).
+
+### Files Structure
+```
+TASK4/
+├── dataset/
+│   └── zomato.csv
+├── zomato.ipynb
+
+```
+
+### Features
+- Data cleaning and preprocessing
+- Descriptive statistics and data visualization
+- Analysis of restaurant ratings, cuisines, and locations
+- Insights on price range and customer reviews
+
+### Usage
+1. Download the dataset from Kaggle and place it in the `dataset` directory.
+2. Install the required packages:
+```bash
+pip install numpy pandas matplotlib seaborn wordcloud
+```
+3. Open the Jupyter notebook and run the cells to perform the analysis:
+```bash
+jupyter notebook zomato.ipynb
+```
+
+## TASK5  Implementatoin of Machine Learning Library from Scratch - ShaSha
+### About ShaSha Library
+
+ShaSha is a custom machine learning library developed from scratch using NumPy. It provides essential machine learning algorithms and utilities for data preprocessing, model training, and evaluation. The library is designed to be simple, efficient, and easy to use for educational purposes and small-scale projects.
+
+### Features
+- Linear Regression
+- Multivariate Linear Regression
+- Logistic Regression
+- Decision Trees
+- Random Forest
+- K-Nearest Neighbors (KNN)
+
+
+### Datasets Used for Testing
+The ShaSha library has been tested on various datasets to ensure its robustness and accuracy:
+- [Red Wine Quality](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009)
+- [Bank Marketing](https://www.kaggle.com/datasets/henriqueyamahata/bank-marketing)
+- [Salary Dataset (Simple Linear Regression)](https://www.kaggle.com/datasets/abhishek14398/salary-dataset-simple-linear-regression)
+- [Insurance](https://www.kaggle.com/datasets/mirichoi0218/insurance)
+
+### Repository
+The source code and documentation for the ShaSha library can be found in the [GitHub repository](https://github.com/shabari48/shasha).
+
+### Installation
+To install the ShaSha library and install the required packages:
+```bash
+pip install shahsa numpy
+```
+
+
+### Usage
+
+> **Note:** Always normalize and standardize your data before feeding it into the model. Ensure that the input data is in the form of a NumPy array .
+
+Import the library and use the provided classes and functions to build and evaluate machine learning models:
+```python
+import shasha
+
+
+# Example: Linear Regression
+from shasha import My_Linear_Regression
+model = LinearRegression()
+model.fit(X_train, y_train)
+predictions = model.predict(X_test)
+```
